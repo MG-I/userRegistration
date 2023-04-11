@@ -41,8 +41,8 @@ public class ApplicationDB {
                             int accountId = AccountsQueryExecutor.checkAccountExist(connection, AccountService.inputAccount());
                             if (accountId == 0) {
                                 Accounts account = new Accounts();
-                                account.setUserId(AccountService.writeUserId);
-                                account.setCurrency(AccountService.writeCurrency);
+                                account.setUserId(AccountService.WRITE_USER_ID);
+                                account.setCurrency(AccountService.WRITE_CURRENCY);
                                 addingAccountToUser(connection,account);
                             } else {
                                 System.out.println("An account in this currency already exists for this user!");
